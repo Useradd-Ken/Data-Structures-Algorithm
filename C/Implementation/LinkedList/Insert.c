@@ -15,10 +15,10 @@ void insertFirst(List *L,int data){
 
 void display(List L){
     List trav;
-    for(trav=L;trav->next!=NULL;trav=trav->next){
+    for(trav=L;trav->next!=NULL;trav=trav->next){ //TRAVERSE TILL THE SECOND LAST NODE
         printf("%d->",trav->data);
     }
-    printf("%d\n\n",trav->data);
+    printf("%d\n\n",trav->data); //PRINT THE LAST NODE DATA
 }
 
 void insertLast(List *L,int data){
