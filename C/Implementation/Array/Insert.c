@@ -42,13 +42,13 @@ void insertLast(ArrList*list, int data)
 
 void insertPos(ArrList*list, int data, int pos)
 {
-    if(list->size<MAX && pos>=0 && pos<=list->size){
+    if(list->size<MAX && pos>=0 && pos<=list->size){ //CHECK FOR SPACE & CHECK IF POSITION IS VALID
         int i;
-        for(i=list->size-1; i>=pos; i--){
+        for(i=list->size-1; i>=pos; i--){ //START SHIFTING FROM THE LAST ELEMENT TO THE RIGHT UNTIL ITS IN THE RIGHT POSITION
             list->Arr[i+1] = list->Arr[i];
         }
-        list->Arr[pos] = data;
-        list->size++;
+        list->Arr[pos] = data; // LOOP STOPS TO THE RIGHT POSITION AND EXITS PLACE THE DATA IN THE INDEX OF ITS POSITION
+        list->size++; // INCREMENT THE SIZE;
     }
 }
 
