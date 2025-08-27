@@ -24,9 +24,9 @@ void display(List L){
 void insertLast(List *L,int data){
     List *trav;
     for(trav=L;*trav!=NULL;trav=&(*trav)->next){}
-    (*trav) = (List) malloc(sizeof(struct node));
-    (*trav)->data = data;
-    (*trav)->next = NULL;
+    (*trav) = (List) malloc(sizeof(struct node)); //Since trav is a pointer to pointer we need to dereference it first to allocate memory to the node and then assign the data and next to NULL
+    (*trav)->data = data; //Now dereference trav to access the node and assign data
+    (*trav)->next = NULL; //Set next to NULL since its the last node
 }
 
 void main()
