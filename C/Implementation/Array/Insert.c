@@ -19,19 +19,6 @@ void insertFirst(ArrList*list, int data)
     }
 }
 
-void display(ArrList list)
-{
-    if(list.size==0){
-        printf("List is Empty\n");
-    }else{
-        for(int i=0; i<list.size-1; i++){
-            printf("%d->", list.Arr[i]);
-        }
-        printf("%d", list.Arr[list.size-1]);
-        printf("\n\n");
-    }
-}
-
 void insertLast(ArrList*list, int data)
 {
     if(list->size<MAX){
@@ -52,6 +39,35 @@ void insertPos(ArrList*list, int data, int pos)
     }
 }
 
+void display(ArrList list)
+{
+    if(list.size==0){
+        printf("List is Empty\n");
+    }else{
+        for(int i=0; i<list.size-1; i++){
+            printf("%d->", list.Arr[i]);
+        }
+        printf("%d", list.Arr[list.size-1]);
+        printf("\n\n");
+    }
+}
+
+void insertUnique(ArrList*L,int x,int pos){
+    if(L->size<MAX && pos>=0 && pos<=L->size){
+        int i;
+        for(i=0;i<L->size && L->Arr[i]!=x;i++){}
+        if(i==L->size){
+        for(i=L->size-1; i>=pos; i--){ //START SHIFTING FROM THE LAST ELEMENT TO THE RIGHT UNTIL ITS IN THE RIGHT POSITION
+            L->Arr[i+1] = L->Arr[i];
+        }
+        L->Arr[pos] = x; // LOOP STOPS TO THE RIGHT POSITION AND EXITS PLACE THE DATA IN THE INDEX OF ITS POSITION
+        L->size++; 
+        }else{
+            printf("Not Unique\n");
+        }
+    }
+}
+
 void main()
 {
     ArrList list;
@@ -65,5 +81,7 @@ void main()
     insertPos(&list, 25, 2);
     display(list);
     insertPos(&list, 5, 0);
-
+    insertUnique(&list,11,1);
+    insertUnique(&list,12,1);
+    display(list);
 }
