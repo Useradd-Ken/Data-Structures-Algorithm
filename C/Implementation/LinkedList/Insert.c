@@ -21,11 +21,23 @@ void display(List L){
     printf("%d\n\n",trav->data);
 }
 
+void insertLast(List *L,int data){
+    List *trav;
+    for(trav=L;*trav!=NULL;trav=&(*trav)->next){}
+    (*trav) = (List) malloc(sizeof(struct node));
+    (*trav)->data = data;
+    (*trav)->next = NULL;
+}
+
 void main()
 {
     List L = NULL;//Initialize it to NULL before populating.
     insertFirst(&L,10);
     insertFirst(&L,20);
     insertFirst(&L,30);
+    display(L);
+    insertLast(&L,40);
+    insertLast(&L,50);
+    insertLast(&L,60);
     display(L);
 }
