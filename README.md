@@ -6,13 +6,18 @@ Welcome to **Data Structures & Algorithms** repository! This repo contains imple
 
 ## 📚 Table of Contents
 
-- [About](#about)
-- [Languages](#languages)
-- [Data Structures](#data-structures)
-- [Algorithms](#algorithms)
-- [Contributing](#contributing)
-- [License](#license)
+- ARRAY IMPLEMENTATION
+  - Version 1
+  - Version 2
+  - Version 3
+  - Version 4
 
+- Linked List
+  - Version 1
+  - Version 2
+  - Version 3
+  - Version 4
+    
 ---
 
 ## 🔍 About
@@ -56,7 +61,7 @@ Implemented algorithms:
 - Sorting (Quick, Merge, Heap, Bubble, Insertion)
 - Searching (Binary Search, Linear Search)
 - Graph Algorithms (BFS, DFS, Dijkstra, Kruskal, Prim)
-- Dynamic Programming
+- Dynamic Memory Allocation Programming
 - Recursion & Backtracking
 
 ---
@@ -65,13 +70,16 @@ Implemented algorithms:
 
 Contributions are welcome! Feel free to:
 
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add Amazing Feature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+1. Create your own branch
+   
 
 ---
+
+## VSC Setup
+
+1. Download VSC
+2. 
+
 
 ## ⭐ Show your support
 
