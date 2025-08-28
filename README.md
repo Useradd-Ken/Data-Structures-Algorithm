@@ -6,12 +6,6 @@ Welcome to **Data Structures & Algorithms** repository! This repo contains imple
 
 ## 📚 Table of Contents
 
-- [About](#about)
-- [Languages](#languages)
-- [Data Structures](#data-structures)
-- [Algorithms](#algorithms)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
