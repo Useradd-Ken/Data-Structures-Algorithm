@@ -6,7 +6,18 @@ Welcome to **Data Structures & Algorithms** repository! This repo contains imple
 
 ## 📚 Table of Contents
 
+-ARRAY IMPLEMENTATION
+  - Version 1
+  - Version 2
+  - Version 3
+  - Version 4
 
+-Linked List
+  - Version 1
+  - Version 2
+  - Version 3
+  - Version 4
+    
 ---
 
 ## 🔍 About
