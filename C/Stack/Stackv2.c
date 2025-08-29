@@ -8,5 +8,22 @@ typedef struct{
 
 
 void init(Stack*L){
-    L->top = -1;
+    L->top = MAX - 1;
 }
+
+int isFull(Stack*S) {
+    return S->top == -1;
+}
+
+int isEmpty(Stack*S) {
+    return S->top == MAX - 1;
+}
+
+void push(Stack*S,int data){
+    if(!isFull(S)) {
+        S->data[S->top--] = data;
+    } else {
+        printf("Stack FULL\n");
+    }
+}
+
