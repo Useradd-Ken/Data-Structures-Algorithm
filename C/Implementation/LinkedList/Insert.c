@@ -43,6 +43,15 @@ void insertPos(List *L,int data,int pos){
     }
 }
 
+void insertSorted(List *L,int data){
+    List *trav;
+    for(trav=L;*trav!=NULL && (*trav)->data < data;trav=&(*trav)->next){}
+    List temp = (List) malloc(sizeof(struct node));
+    temp->data = data;
+    temp->next = *trav;
+    *trav = temp;
+}
+
 
 void main()
 {
@@ -60,4 +69,8 @@ void main()
     insertPos(&L,5,1);
     display(L);
     insertPos(&L,70,10); //This should give position out of bounds
+    display(L);
+    insertSorted(&L,35);
+    display(L);
+    insertSorted(&L,5);
 }
