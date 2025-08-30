@@ -29,6 +29,21 @@ void insertLast(List *L,int data){
     (*trav)->next = NULL; //Set next to NULL since its the last node
 }
 
+void insertPos(List *L,int data,int pos){
+    List *trav;
+    int i;
+    for(trav=L,i=0;*trav!=NULL && i<pos-1;trav=&(*trav)->next,i++){}
+    if(i==pos-1){ //If we have reached the desired position
+        List temp = (List) malloc(sizeof(struct node));
+        temp->data = data;
+        temp->next = *trav;
+        *trav = temp;
+    } else {
+        printf("Position out of bounds\n");
+    }
+}
+
+
 void main()
 {
     List L = NULL;//Initialize it to NULL before populating.
@@ -40,4 +55,9 @@ void main()
     insertLast(&L,50);
     insertLast(&L,60);
     display(L);
+    insertPos(&L,25,3);
+    display(L);
+    insertPos(&L,5,1);
+    display(L);
+    insertPos(&L,70,10); //This should give position out of bounds
 }
