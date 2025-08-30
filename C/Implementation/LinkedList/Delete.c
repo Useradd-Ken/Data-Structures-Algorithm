@@ -32,3 +32,16 @@ void deleteElement(List *L,int data){
     }
 }
 
+void deletePos(List *L,int pos){
+    List *trav;
+    int i;
+    for(trav=L,i=0;*trav!=NULL && i<pos;trav=&(*trav)->next,i++){}
+    if(*trav!=NULL){ //If we found the position
+        List temp = *trav; //Store the address of the node to be deleted
+        *trav = (*trav)->next; //Bypass the node to be deleted
+        free(temp); //Free the memory of the deleted node
+    } else {
+        printf("Position out of bounds\n");
+    }
+}
+
