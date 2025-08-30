@@ -58,6 +58,15 @@ void deleteAllOccurences(List*L,int data){
     }
 }
 
+void deleteAllElement(List *L){
+    List trav;
+    while(*L != NULL){
+        trav = *L; //Store the address of the node to be deleted
+        *L = (*L)->next; //Bypass the node to be deleted
+        free(trav); //Free the memory of the deleted node
+    }
+}
+
 void main()
 {
     List L = NULL;//Initialize it to NULL before populating.
