@@ -32,3 +32,22 @@ int realloc(VirtualHeap*VH){
     }
     return temp; //Return the index of the allocated node or -1 if none available
 }
+
+void insertFirst(VirtualHeap*VH,cList*L,int data){
+    int newNodeIndex = realloc(VH); //Get a free node from the virtual heap
+    if(newNodeIndex != -1){ //If a free node is available
+        VH->nodes[newNodeIndex].data = data; //Set the data
+        VH->nodes[newNodeIndex].link = *L; //Link the new node to the current head
+        *L = newNodeIndex; //Update the head to the new node
+    } else {
+        printf("No space available in virtual heap\n");
+    }
+}
+
+void display(VirtualHeap*VH,cList L){
+    int trav = L;
+    for(;trav != -1; trav = VH->nodes[trav].link){
+        printf("%d -> ", VH->nodes[trav].data);
+    }
+    printf("NULL\n");
+}
