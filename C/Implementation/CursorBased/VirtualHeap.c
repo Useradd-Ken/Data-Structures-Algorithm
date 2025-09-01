@@ -25,3 +25,10 @@ void initVirtualHeap(VirtualHeap*VH,cList *L){
     *L = -1; //Initialize the list as empty
 }
 
+int realloc(VirtualHeap*VH){
+    int temp = VH->Avail; //Get the index of the first free node
+    if(temp != -1){ //If there is a free node
+        VH->Avail = VH->nodes[temp].link; //Update Avail to the next free node
+    }
+    return temp; //Return the index of the allocated node or -1 if none available
+}
