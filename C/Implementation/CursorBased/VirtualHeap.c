@@ -71,6 +71,22 @@ void insertLast(VirtualHeap*VH,cList*L,int data){
     }
 }
 
+void deleteElement(VirtualHeap*VH,cList*L,int data){
+    int *trav = L;
+    while(*trav != -1 && VH->nodes[*trav].data != data){
+        trav = &VH->nodes[*trav].link;
+    }
+    if(*trav != -1){ //If we found the element
+        int temp = *trav; //Store the index of the node to be deleted
+        *trav = VH->nodes[*trav].link; //Bypass the node to be deleted
+        // Add the deleted node back to the free list
+        VH->nodes[temp].link = VH->Avail;
+        VH->Avail = temp;
+    } else {
+        printf("Element not found\n");
+    }
+}
+
 int main(){
     VirtualHeap VH;
     cList myList;
