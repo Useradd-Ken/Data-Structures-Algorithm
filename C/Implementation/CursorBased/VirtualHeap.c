@@ -119,6 +119,22 @@ void deleteAllOccurrences(VirtualHeap*VH,cList*L,int data){
     }
 }
 
+void deleteLast(VirtualHeap*VH,cList*L){
+    int *trav = L;
+    if(*trav == -1){
+        printf("List is empty\n");
+        return;
+    }
+    while(VH->nodes[*trav].link != -1){
+        trav = &VH->nodes[*trav].link;
+    }
+    int temp = *trav; //Store the index of the node to be deleted
+    *trav = -1; //Bypass the last node
+    // Add the deleted node back to the free list
+    VH->nodes[temp].link = VH->Avail;
+    VH->Avail = temp;
+}
+
 int main(){
     VirtualHeap VH;
     cList myList;
