@@ -87,6 +87,23 @@ void deleteElement(VirtualHeap*VH,cList*L,int data){
     }
 }
 
+void deletePos(VirtualHeap*VH,cList*L,int pos){
+    int *trav = L;
+    int i;
+    for(i=0;*trav != -1 && i<pos;i++){
+        trav = &VH->nodes[*trav].link;
+    }
+    if(*trav != -1){ //If we found the position
+        int temp = *trav; //Store the index of the node to be deleted
+        *trav = VH->nodes[*trav].link; //Bypass the node to be deleted
+        // Add the deleted node back to the free list
+        VH->nodes[temp].link = VH->Avail;
+        VH->Avail = temp;
+    } else {
+        printf("Position out of bounds\n");
+    }
+}
+
 int main(){
     VirtualHeap VH;
     cList myList;
