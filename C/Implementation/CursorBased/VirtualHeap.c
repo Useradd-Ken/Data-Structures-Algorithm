@@ -104,6 +104,21 @@ void deletePos(VirtualHeap*VH,cList*L,int pos){
     }
 }
 
+void deleteAllOccurrences(VirtualHeap*VH,cList*L,int data){
+    int *trav = L;
+    while(*trav != -1){
+        if(VH->nodes[*trav].data == data){
+            int temp = *trav; //Store the index of the node to be deleted
+            *trav = VH->nodes[*trav].link; //Bypass the node to be deleted
+            // Add the deleted node back to the free list
+            VH->nodes[temp].link = VH->Avail;
+            VH->Avail = temp;
+        } else {
+            trav = &VH->nodes[*trav].link; //Only move to next if we didn't delete the current node
+        }
+    }
+}
+
 int main(){
     VirtualHeap VH;
     cList myList;
