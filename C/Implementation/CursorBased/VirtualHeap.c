@@ -135,6 +135,17 @@ void deleteLast(VirtualHeap*VH,cList*L){
     VH->Avail = temp;
 }
 
+void deleteAllElements(VirtualHeap*VH,cList*L){
+    int trav;
+    while(*L != -1){
+        trav = *L; //Store the index of the node to be deleted
+        *L = VH->nodes[*L].link; //Bypass the node to be deleted
+        // Add the deleted node back to the free list
+        VH->nodes[trav].link = VH->Avail;
+        VH->Avail = trav;
+    }
+}
+
 int main(){
     VirtualHeap VH;
     cList myList;
