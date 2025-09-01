@@ -51,3 +51,36 @@ void display(VirtualHeap*VH,cList L){
     }
     printf("NULL\n");
 }
+
+void insertLast(VirtualHeap*VH,cList*L,int data){
+    int newNodeIndex = realloc(VH); //Get a free node from the virtual heap
+    if(newNodeIndex != -1){ //If a free node is available
+        VH->nodes[newNodeIndex].data = data; //Set the data
+        VH->nodes[newNodeIndex].link = -1; //New node will be the last node, so link to -1
+        if(*L == -1){ //If the list is empty
+            *L = newNodeIndex; //New node becomes the head
+        } else {
+            int trav = *L;
+            while(VH->nodes[trav].link != -1){ //Traverse to the last node
+                trav = VH->nodes[trav].link;
+            }
+            VH->nodes[trav].link = newNodeIndex; //Link the last node to the new node
+        }
+    } else {
+        printf("No space available in virtual heap\n");
+    }
+}
+
+int main(){
+    VirtualHeap VH;
+    cList myList;
+    initVirtualHeap(&VH, &myList);
+    
+    insertFirst(&VH, &myList, 10);
+    insertFirst(&VH, &myList, 20);
+    insertFirst(&VH, &myList, 30);
+    
+    display(&VH, myList);
+    
+    return 0;
+}
