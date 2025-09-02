@@ -25,7 +25,7 @@ void initVirtualHeap(VirtualHeap*VH,cList *L){
     *L = -1; //Initialize the list as empty
 }
 
-int realloc(VirtualHeap*VH){
+int reAlloc(VirtualHeap*VH){
     int temp = VH->Avail; //Get the index of the first free node
     if(temp != -1){ //If there is a free node
         VH->Avail = VH->nodes[temp].link; //Update Avail to the next free node
@@ -34,7 +34,7 @@ int realloc(VirtualHeap*VH){
 }
 
 void insertFirst(VirtualHeap*VH,cList*L,int data){
-    int newNodeIndex = realloc(VH); //Get a free node from the virtual heap
+    int newNodeIndex = reAlloc(VH); //Get a free node from the virtual heap
     if(newNodeIndex != -1){ //If a free node is available
         VH->nodes[newNodeIndex].data = data; //Set the data
         VH->nodes[newNodeIndex].link = *L; //Link the new node to the current head
@@ -52,24 +52,38 @@ void display(VirtualHeap*VH,cList L){
     printf("NULL\n");
 }
 
-void insertLast(VirtualHeap*VH,cList*L,int data){
-    int newNodeIndex = realloc(VH); //Get a free node from the virtual heap
-    if(newNodeIndex != -1){ //If a free node is available
-        VH->nodes[newNodeIndex].data = data; //Set the data
-        VH->nodes[newNodeIndex].link = -1; //New node will be the last node, so link to -1
-        if(*L == -1){ //If the list is empty
-            *L = newNodeIndex; //New node becomes the head
-        } else {
-            int trav = *L;
-            while(VH->nodes[trav].link != -1){ //Traverse to the last node
-                trav = VH->nodes[trav].link;
-            }
-            VH->nodes[trav].link = newNodeIndex; //Link the last node to the new node
-        }
+// void insertLast(VirtualHeap*VH,cList*L,int data){
+//     int newNodeIndex = realloc(VH); //Get a free node from the virtual heap
+//     if(newNodeIndex != -1){ //If a free node is available
+//         VH->nodes[newNodeIndex].data = data; //Set the data
+//         VH->nodes[newNodeIndex].link = -1; //New node will be the last node, so link to -1
+//         if(*L == -1){ //If the list is empty
+//             *L = newNodeIndex; //New node becomes the head
+//         } else {
+//             int trav = *L;
+//             while(VH->nodes[trav].link != -1){ //Traverse to the last node
+//                 trav = VH->nodes[trav].link;
+//             }
+//             VH->nodes[trav].link = newNodeIndex; //Link the last node to the new node
+//         }
+//     } else {
+//         printf("No space available in virtual heap\n");
+//     }
+// }
+
+void insertLast(VirtualHeap*VH,cList*L,int data){               //Alternative implementation without using realloc
+    cList*trav;                                                 //Pointer to traverse the list
+    for(trav=L;*trav!=-1;trav=&VH->nodes[*trav].link){}         //Traverse to the end of the list
+    *trav = VH->Avail;                                          //Link the last node to the first available node    
+    if(*trav!=-1){                                              //If there is space available               
+        VH->Avail = VH->nodes[VH->Avail].link;
+        VH->nodes[*trav].data = data;
+        VH->nodes[*trav].link = -1;
     } else {
         printf("No space available in virtual heap\n");
     }
 }
+
 
 void deleteElement(VirtualHeap*VH,cList*L,int data){
     int *trav = L;
