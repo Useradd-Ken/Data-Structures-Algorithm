@@ -56,4 +56,17 @@ void insertFirst(List *L, StudInfo data){
     }
 }
 
+int main(){
+    List L;
+    initVirtualHeap(&L);
+    StudInfo data1 = {{"Cruz", "Juan", 'D'}, 20, 2021001, "BSIT"};
+    StudInfo data2 = {{"Santos", "Pedro", 'A'}, 21, 2021002, "BSCS"};
+    StudInfo data3 = {{"Reyes", "Maria", 'B'}, 19, 2021003, "BSIT"};
+    insertFirst(&L, data1);
+    insertFirst(&L, data2);
+    insertFirst(&L, data3);
+    display(L);
+    return 0;
+}
+
 
