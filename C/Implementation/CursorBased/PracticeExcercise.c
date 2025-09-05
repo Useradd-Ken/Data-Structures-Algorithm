@@ -41,10 +41,19 @@ void initVirtualHeap(List *L){
 void display(List L){
     int trav;
     for(trav=L.cList;trav!=-1;trav=L.VH->link){
-        printf("%s, %s %c | %d | %d | %s\n", L.VH->stud[trav].name.LName, L.VH->stud[trav].name.FName, L.VH->stud[trav].name.Mi, L.VH->stud[trav].age, L.VH->stud[trav].ID, L.VH->stud[trav].course);
+        printf("%s, %s %c\t\t%d\t\t%d\t\t%s\n", L.VH->stud[trav].name.LName, L.VH->stud[trav].name.FName, L.VH->stud[trav].name.Mi, L.VH->stud[trav].age, L.VH->stud[trav].ID, L.VH->stud[trav].course);
     }
     printf("\n");
 }
 
+void insertFirst(List *L, StudInfo data){
+    if(L->Avail!=-1){
+        int newNode = L->Avail;
+        L->Avail = L->VH->link;
+        L->VH->stud[newNode] = data;
+        L->VH->link = L->cList;
+        L->cList = newNode;
+    }
+}
 
 
