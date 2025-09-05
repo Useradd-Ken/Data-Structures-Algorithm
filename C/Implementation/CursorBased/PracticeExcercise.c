@@ -38,3 +38,13 @@ void initVirtualHeap(List *L){
     L->cList = -1;
 }
 
+void display(List L){
+    int trav;
+    for(trav=L.cList;trav!=-1;trav=L.VH->link){
+        printf("%s, %s %c | %d | %d | %s\n", L.VH->stud[trav].name.LName, L.VH->stud[trav].name.FName, L.VH->stud[trav].name.Mi, L.VH->stud[trav].age, L.VH->stud[trav].ID, L.VH->stud[trav].course);
+    }
+    printf("\n");
+}
+
+
+
