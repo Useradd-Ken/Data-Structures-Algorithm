@@ -1,4 +1,4 @@
-#include "StackArrayHeader.h"
+#include "StackHeader.h"
 #include <stdio.h>
 
 // Initialize the stack
@@ -12,8 +12,7 @@ void push(Stack *S, int data) {
         printf("Stack Overflow! Cannot push %d\n", data);
         return;
     }
-    S->top++;
-    S->data[S->top] = data;
+    S->data[++S->top] = data;
 }
 
 // Pop an element from the stack

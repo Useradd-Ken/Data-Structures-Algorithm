@@ -1,4 +1,4 @@
-#include "StackArrayyHeader.c"
+#include "StackHeader.c"
 
 void main(){
     Stack myStack;
