@@ -9,3 +9,6 @@ bool isFull(Queues Q){
     return (Q.rear + 1) % MAX == Q.front;
 }
 
+bool isEmpty(Queues Q){
+    return Q.rear == -1;
+}
