@@ -14,13 +14,15 @@ bool isEmpty(Queues Q){
 }
 
 void enqueue(Queues *Q,int data){
-    if(isFull(*Q)){
-        printf("Queue Overflow\n");
-        return;
-    }
-    Q->rear = (Q->rear + 1) % MAX;
-    Q->arr[Q->rear] = data;
-    if(Q->front == 0 && Q->rear == 0){
-        Q->front = 0; // If the first element is added, set front to 0
+    if(!isFull(*Q)){
+        Q->rear = (Q->rear+1)%MAX;
+        Q->arr[Q->rear] = data;
     }
 }
+
+void dequeue(Queues*Q){
+    if(!isEmpty(*Q)){
+        Q->front = (Q->front+1)%MAX;
+    }
+}
+
