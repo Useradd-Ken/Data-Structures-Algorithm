@@ -16,7 +16,7 @@ void initQueue(Queues *Q);
 bool isFull(Queues Q);
 bool isEmpty(Queues Q);
 void enqueue(Queues *Q,int data);
-int dequeue(Queues *Q);
+void dequeue(Queues *Q);
 void display(Queues Q);
 
 #endif
