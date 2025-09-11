@@ -14,4 +14,9 @@ typedef struct{
     Nodeptr rear;
 }Queue;
 
+void initQueue(Queue* Q);
+void enqueue(Queue* Q, int x);
+int dequeue(Queue* Q);
+void display(Queue Q);
+
 #endif
