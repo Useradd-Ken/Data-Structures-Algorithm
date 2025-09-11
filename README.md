@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Useradd-Ken/Data-Structures-Algorithm/main/assets/banner.png" alt="Data Structures and Algorithms Banner" width="800"/>
+  <img src="/What-is-Data-Structures-and-Algorithms.jpg" alt="Data Structures and Algorithms Banner" width="800"/>
 </p>
 
 # 📘 Data Structures & Algorithms
