@@ -28,3 +28,12 @@ void dequeue(Queue*Q){
     }
 }
 
+void display(Queue Q){
+    Nodeptr temp = Q.front;
+    while(temp!=NULL){
+        printf("%d ",temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
