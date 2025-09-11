@@ -11,26 +11,41 @@ This repository serves as both a learning reference and a practice ground for so
 
 ---
 
-
-
-
 ## 📂 Repository Structure
 ```
 Data-Structures-Algorithm/
-├── 📘 Notes/ # Written explanations, summaries, or diagrams
-├── ⚙️ Implementations/ # Code implementations of data structures & algorithms
-│ ├── 📑 Arrays/
-│ ├── 🔗 LinkedLists/
-│ ├── 📚 Stacks/
-│ ├── 📥 Queues/
-│ ├── 🌳 Trees/
-│ ├── 🌐 Graphs/
-│ ├── 🔢 Sorting/
-│ ├── 🔍 Searching/
-│ └── 🧩 DynamicProgramming/
+├── 📘 README.md/ # Written explanations, summaries, or diagrams
+├── 𝐂 C/ # Code implementations of data structures & algorithms
+|   ├──⚙️ Implementations/ # Code implementations of data structures & algorithms
+│         ├── 📑 Arrays/
+│         ├── 🀠 CursorBased/
+|         ├── 🔗 LinkedLists/
+│   ├── 📚 Stacks/ #Last In First Out (LIFO)
+│   ├── 📘 README.md/ # Written explanations, summaries, or diagrams
+│   ├── 📑 ArrayInHeaderFiles/
+│         ├──LinkedListStack.c
+│         ├──LinkedListStack.h
+│         ├──StackHeader.c
+│   ├── 📥 Queues/ #First In First Out (FIFO)
+│   ├── 📘 README.md/ # Written explanations, summaries, or diagrams
+│   ├── 📑 CircularArray/
+│         ├──CircularArray.c
+│         ├──CircularArray.h
+│         ├──CircularMain.c
+│   ├── 🌳 Trees/
+│   ├── 🌐 Graphs/
+│   ├── 🔢 Sorting/
+│   ├── 🔍 Searching/
+│   └── 🧩 DynamicProgramming/
 ├── 🏆 Challenges/ # Practice problems and exercises
 ├── 🧪 Tests/ # Unit tests or example runs
+├── 𝐂# C sharp / Object Oriented Programming (OOP)
+|   ├──🔎 Abstraction/ # Code implementations of data structures & algorithms
+|   ├──💊 Encapsulation/ # Code implementations of data structures & algorithms
+|   ├──👨‍👦‍👦 Inheritance/ # Code implementations of data structures & algorithms
+|   ├──؛༊ Polymorphism/ # Code implementations of data structures & algorithms
 └── 📂 Resources/ # References, articles, and cheat sheets
+
 
 ```
 ---
