@@ -17,21 +17,22 @@ This repository serves as both a learning reference and a practice ground for so
 
 ## 📂 Repository Structure
 
+
 Data-Structures-Algorithm/
-├── Notes/ # Written explanations, summaries, or diagrams
-├── Implementations/ # Code implementations of data structures & algorithms
-│ ├── Arrays/
-│ ├── LinkedLists/
-│ ├── Stacks/
-│ ├── Queues/
-│ ├── Trees/
-│ ├── Graphs/
-│ ├── Sorting/
-│ ├── Searching/
-│ └── DynamicProgramming/
-├── Challenges/ # Practice problems and exercises
-├── Tests/ # Unit tests or example runs
-└── Resources/ # References, articles, and cheat sheets
+├── 📘 Notes/ # Written explanations, summaries, or diagrams
+├── ⚙️ Implementations/ # Code implementations of data structures & algorithms
+│ ├── 📑 Arrays/
+│ ├── 🔗 LinkedLists/
+│ ├── 📚 Stacks/
+│ ├── 📥 Queues/
+│ ├── 🌳 Trees/
+│ ├── 🌐 Graphs/
+│ ├── 🔢 Sorting/
+│ ├── 🔍 Searching/
+│ └── 🧩 DynamicProgramming/
+├── 🏆 Challenges/ # Practice problems and exercises
+├── 🧪 Tests/ # Unit tests or example runs
+└── 📂 Resources/ # References, articles, and cheat sheets
 
 
 ---
