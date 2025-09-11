@@ -36,14 +36,14 @@ Data-Structures-Algorithm/
 │   ├── 🌐 Graphs/
 │   ├── 🔢 Sorting/
 │   ├── 🔍 Searching/
-│   └── 🧩 DynamicProgramming/
+└── 📂 Resources/ # References, articles, and cheat sheets
 ├── 🏆 Challenges/ # Practice problems and exercises
 ├── 🧪 Tests/ # Unit tests or example runs
 ├── 𝐂# C sharp / Object Oriented Programming (OOP)
-|   ├──🔎 Abstraction/ # Code implementations of data structures & algorithms
-|   ├──💊 Encapsulation/ # Code implementations of data structures & algorithms
-|   ├──👨‍👦‍👦 Inheritance/ # Code implementations of data structures & algorithms
-|   ├──؛༊ Polymorphism/ # Code implementations of data structures & algorithms
+|   ├──🔎 Abstraction/ 
+|   ├──💊 Encapsulation/ 
+|   ├──👨‍👦‍👦 Inheritance/ 
+|   ├──؛༊ Polymorphism/ 
 └── 📂 Resources/ # References, articles, and cheat sheets
 
 
@@ -69,7 +69,7 @@ Data-Structures-Algorithm/
 ### Prerequisites
 
 - **Language(s):** C (and possibly others, depending on folder content)  
-- Compiler: `gcc` for C implementations  
+- Compiler: `gcc` for C implementations https://sourceforge.net/projects/mingw-w64/ 
 - Git for cloning the repo
 
 ### Setup
@@ -80,11 +80,12 @@ git clone https://github.com/Useradd-Ken/Data-Structures-Algorithm.git
 
 # Enter the folder
 cd Data-Structures-Algorithm
+cd C
 
 # Example: compile and run a C file
-cd Implementations/Sorting
-gcc quicksort.c -o quicksort
-./quicksort
+cd Implementations/Array
+gcc InsertFirst.c -o Insertfirst
+./InsertFirst
 
 ```
 
