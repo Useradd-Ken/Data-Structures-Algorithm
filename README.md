@@ -6,7 +6,7 @@
 
 [![GitHub repo](https://img.shields.io/badge/repo-Useradd--Ken%2FData--Structures--Algorithm-blue?style=flat-square&logo=github)](https://github.com/Useradd-Ken/Data-Structures-Algorithm)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Useradd-Ken/Data-Structures-Algorithm?style=flat-square)
-![GitHub language count](https://img.shields.io/github/languages/count/Useradd-Ken/Data-Structures-Algorithm/C?style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/Useradd-Ken/Data-Structures-Algorithm?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/Useradd-Ken/Data-Structures-Algorithm?style=flat-square&color=brightgreen)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
