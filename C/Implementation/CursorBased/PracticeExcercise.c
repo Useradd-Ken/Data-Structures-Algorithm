@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #define MAX 20
 
-// ----------------------
-// User-defined Data Types
-// ----------------------
 typedef struct {
     char LName[16];
     char FName[24];
