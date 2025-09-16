@@ -8,6 +8,7 @@ typedef struct{
 
 void display(ArrayList list)
 {
+    // Displayyy
     if(list.size==0){
         printf("List is Empty\n");
     }else{
