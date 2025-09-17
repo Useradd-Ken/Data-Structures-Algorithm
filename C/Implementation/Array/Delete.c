@@ -23,6 +23,7 @@ void display(ArrayList list)
 // Delete the first element
 int DeleteFirst(ArrayList *list)
 {
+    // Delete the first element
     if(list->size == 0){
         printf("Cannot delete from empty list\n");
         return -1; // Error code
