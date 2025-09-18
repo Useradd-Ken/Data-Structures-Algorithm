@@ -56,6 +56,7 @@ int DeleteLast(ArrayList *list)
 // Delete element at specific position
 int DeletePosition(ArrayList *list, int position)
 {
+    // Delete element at specific position
     if(list->size == 0){
         printf("Cannot delete from empty list\n");
         return -1;
