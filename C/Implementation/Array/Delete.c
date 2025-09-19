@@ -43,6 +43,7 @@ int DeleteFirst(ArrayList *list)
 // Delete the last element
 int DeleteLast(ArrayList *list)
 {
+    // Delete the last element
     if(list->size == 0){
         printf("Cannot delete from empty list\n");
         return -1; // Error code
