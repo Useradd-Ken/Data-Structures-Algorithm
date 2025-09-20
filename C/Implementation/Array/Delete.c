@@ -81,7 +81,7 @@ int DeletePosition(ArrayList *list, int position)
 
 // Delete all unique elements (elements that appear only once)
 void DeleteAllUnique(ArrayList *list)
-{
+{// Delete all unique elements (elements that appear only once)
     if(list->size == 0){
         printf("List is empty\n");
         return;
