@@ -4,9 +4,9 @@
 
 typedef char SET;
 
-SET findElem(SET*A, int elem)
+SET findElem(SET A, int elem)
 {
-    
+    return (A & (1 << elem)) != 0;
 }
 
 void main(){
