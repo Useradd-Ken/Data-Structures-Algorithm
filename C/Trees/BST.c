@@ -20,7 +20,18 @@ void insertElem(BST*t,int elem){
     }
 }
 
+// Insert in the Partially Ordered Tree from the BST
+//LEFT-CHILD = (NODE_INDEX * 2) +1
+//RIGHT-CHILD = (NODE_INDEX * 2) +2
+//PARENT = (NODE_INDEX -1) /2
 
+// MAX HEAP (PARENT > CHILDREN NODES)
+// MIN HEAP (PARENT < CHILDREN NODES)
+
+void insertPOT(BST*T,BST*POT){
+
+
+}
 
 void main()
 {
