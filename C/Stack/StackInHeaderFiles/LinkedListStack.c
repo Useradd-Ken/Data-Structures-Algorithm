@@ -47,6 +47,7 @@ void display(Stack *S) {
     }
     printf("\n");
 }
+
 int peek(Stack *S) {
     if (isEmpty(S)) {
         printf("Stack is empty\n");

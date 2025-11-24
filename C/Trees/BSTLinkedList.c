@@ -14,7 +14,6 @@ void init(BST*T){
 }
 
 void insertElem(BST*T,int elem){
-
     BST *trav;
     for(trav=T;*trav!=NULL;)
     {
@@ -28,6 +27,7 @@ void insertElem(BST*T,int elem){
     (*trav)->data = elem;
     (*trav)->RC = NULL;
     (*trav)->LC =NULL;
+
 }
 
 int isMember(BST T, int elem){
@@ -41,7 +41,6 @@ int isMember(BST T, int elem){
     }
     return (trav!=NULL) ? trav->data : -1;
 }
-
 
 void main()
 {
