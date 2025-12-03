@@ -32,7 +32,9 @@ void main(){
         //printf("%d ",t.arr[t.lastNdx-1]);
     insertElem(&t,15);
         //printf("%d ",t.arr[t.lastNdx-1]);
-   
+    insertElem(&t,15);
+      insertElem(&t,15);
+        printf("%d ",t.arr[t.lastNdx-1]);
     display(t);
 
 }
