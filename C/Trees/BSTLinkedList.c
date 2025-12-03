@@ -30,17 +30,23 @@ void insertElem(BST*T,int elem){
 
 }
 
+// int isMember(BST T, int elem){
+//     BST trav;
+//     for(trav=T;trav!=NULL && trav->data!=elem;){
+//         if(trav->data<elem){
+//             trav=trav->RC;
+//         }else{
+//             trav=trav->LC;
+//         }
+//     }
+//     return (trav!=NULL) ? trav->data : -1;
+// }
 int isMember(BST T, int elem){
     BST trav;
-    for(trav=T;trav!=NULL && trav->data!=elem;){
-        if(trav->data<elem){
-            trav=trav->RC;
-        }else{
-            trav=trav->LC;
-        }
-    }
+    for(trav=T;trav!=NULL;trav=(trav->data<elem)? trav->RC : trav->LC){}
     return (trav!=NULL) ? trav->data : -1;
 }
+
 
 void main()
 {
